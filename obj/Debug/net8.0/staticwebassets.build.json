@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "cO1c7+ZRTgWbidTgYt8bl5rKSUPLjJz/3+m+w6N+tNg=",
+  "Source": "delete-microservice",
+  "BasePath": "_content/delete-microservice",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
