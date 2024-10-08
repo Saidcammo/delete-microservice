@@ -1,22 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: rabbit-deployment
-  labels:
-    app: rabbit
+  name: delete-deployment
 spec:
-  replicas: 1
+  replicas: 2  # Antal pods att köra
   selector:
     matchLabels:
-      app: rabbit
+      app: delete
   template:
     metadata:
       labels:
-        app: rabbit
+        app: delete
     spec:
       containers:
-        - name: rabbit
-          image: rabbitmq
-          imagePullPolicy: Always
+        - name: delete
+          image: delete:latest  # Namnet på din Docker-image
           ports:
-          - containerPort: 8080
+               - targetPort: 4444
+               - containerPort: 8080  # Porten som containern lyssnar på
