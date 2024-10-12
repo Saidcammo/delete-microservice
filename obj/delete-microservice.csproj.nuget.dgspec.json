@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\said_\\OneDrive\\Skrivbord\\delete-microservice\\delete-microservice\\delete-microservice.csproj": {}
+    "C:\\Users\\ljung\\OneDrive\\Skrivbord\\SkolaCsharp\\saidtemp\\delete-microservice\\delete-microservice.csproj": {}
   },
   "projects": {
-    "C:\\Users\\said_\\OneDrive\\Skrivbord\\delete-microservice\\delete-microservice\\delete-microservice.csproj": {
+    "C:\\Users\\ljung\\OneDrive\\Skrivbord\\SkolaCsharp\\saidtemp\\delete-microservice\\delete-microservice.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\said_\\OneDrive\\Skrivbord\\delete-microservice\\delete-microservice\\delete-microservice.csproj",
+        "projectUniqueName": "C:\\Users\\ljung\\OneDrive\\Skrivbord\\SkolaCsharp\\saidtemp\\delete-microservice\\delete-microservice.csproj",
         "projectName": "delete-microservice",
-        "projectPath": "C:\\Users\\said_\\OneDrive\\Skrivbord\\delete-microservice\\delete-microservice\\delete-microservice.csproj",
-        "packagesPath": "C:\\Users\\said_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\said_\\OneDrive\\Skrivbord\\delete-microservice\\delete-microservice\\obj\\",
+        "projectPath": "C:\\Users\\ljung\\OneDrive\\Skrivbord\\SkolaCsharp\\saidtemp\\delete-microservice\\delete-microservice.csproj",
+        "packagesPath": "C:\\Users\\ljung\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ljung\\OneDrive\\Skrivbord\\SkolaCsharp\\saidtemp\\delete-microservice\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\said_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ljung\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,6 +39,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -47,6 +57,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
+            },
+            "rabbitmq.client": {
+              "target": "Package",
+              "version": "[6.8.1, )"
             }
           },
           "imports": [
@@ -68,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

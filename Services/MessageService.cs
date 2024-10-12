@@ -11,14 +11,9 @@ public class MessageService : IHostedService
     // Anslut till RabbitMQ
     public void Connect()
     {
-        System.Console.WriteLine("HEJ!");
-        var factory = new ConnectionFactory { HostName = "localhost" };
+        var factory = new ConnectionFactory { HostName = "10.104.114.61", Port = 5672 };
         connection = factory.CreateConnection();
         channel = connection.CreateModel();
-
-        // Skapa en exchange för att kunna skicka meddelanden
-        // till andra microservices
-        channel.ExchangeDeclare("create-listing", ExchangeType.Fanout);
         
         channel.ExchangeDeclare("delete-listing", ExchangeType.Fanout);
         
@@ -26,20 +21,10 @@ public class MessageService : IHostedService
 
     }
 
-    // Skicka ett meddelande till andra microservices
-    public void NotifyListingCreation(ListingDto listing)
-    {
-        var json = JsonSerializer.Serialize(listing);
-        var message = Encoding.UTF8.GetBytes(json);
-
-        channel.BasicPublish("create-listing", string.Empty, null, message);
-    }
-
     // Skicka ett meddelande om borttagningen av en annons
-    public void NotifyListingDelete(ListingDto listing)
+    public void NotifyListingDelete(string id)
     {
-        var json = JsonSerializer.Serialize(listing);
-        var message = Encoding.UTF8.GetBytes(json);
+        var message = Encoding.UTF8.GetBytes(id);
 
         channel.BasicPublish("delete-listing", string.Empty, null, message);
     }

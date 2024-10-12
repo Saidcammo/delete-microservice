@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("delete-microservice")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6a77dd935cd6ceb1a552d6042aa4c1bbf3e09857")]
 [assembly: System.Reflection.AssemblyProductAttribute("delete-microservice")]
 [assembly: System.Reflection.AssemblyTitleAttribute("delete-microservice")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

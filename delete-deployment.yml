@@ -1,9 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: delete-deployment
+  name: delete-microservice
+  labels:
+    app: delete
 spec:
-  replicas: 2  # Antal pods att köra
+  replicas: 1
   selector:
     matchLabels:
       app: delete
@@ -14,7 +16,7 @@ spec:
     spec:
       containers:
         - name: delete
-          image: delete:latest  # Namnet på din Docker-image
+          image: docker.io/library/delete-microservice:latest
+          imagePullPolicy: Never
           ports:
-               - targetPort: 4444
-               - containerPort: 8080  # Porten som containern lyssnar på
+            - containerPort: 8080
